@@ -13,7 +13,7 @@ export default {
 <template>
   <div id="app">
     <h1>Hola mundo!</h1>
-    <Test/>
+    <Test msg="HOLA DESDE EL PADRE"/>
   </div>
 </template>
 

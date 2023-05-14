@@ -23,6 +23,18 @@ export default {
     tipedEnter(e){
         alert('enter!');
     }
+  },
+  computed: {
+    fullName(){
+      return this.user.firstName + ' ' + this.user.lastName;  
+    }
+  },
+  props: {
+    msg: {
+      type: String,
+      default: 'Mensaje por defecto'
+
+    }
   }
 }
 </script>
@@ -48,6 +60,10 @@ export default {
         <button type="button" v-on:click="saludar(user.firstName)">
             CLICK ME
         </button>
+        <hr>
+        <p>{{ fullName }}</p>
+        <hr>
+        <p><strong>{{ msg }}</strong></p>
     </div>
 </template>
 
